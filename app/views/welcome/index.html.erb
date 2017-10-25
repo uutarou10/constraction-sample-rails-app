@@ -1,2 +1,13 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Welcome!!</h1>
+<p>This is comment board</p>
+
+<%= link_to 'Create new post', '/post' %>
+
+<h2>All posts</h2>
+
+<% @post.each do |post| %>
+    <div class="post">
+      <p><%= post.body %></p>
+      <p class="author">Post by <%= post.author %> (<%= post.created_at.strftime("%Y/%m/%d, %H:%M:%S") %>)</p>
+    </div>
+<% end %>
