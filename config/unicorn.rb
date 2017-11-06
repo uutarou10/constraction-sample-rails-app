@@ -2,7 +2,7 @@ worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
 timeout 15
 preload_app true
 
-listen '/home/uutarou/constraction-sample-rails-app/tmp/unicorn.sock'
+listen '/home/uutarou/construction-sample-rails-app/tmp/unicorn.sock'
 pid    '/home/uutarou/connection-sample-rails-app/tmp/unicorn.pid'
 
 before_fork do |server, worker|
@@ -15,12 +15,12 @@ before_fork do |server, worker|
     ActiveRecord::Base.connection.disconnect!
 end 
 
-after_forkworker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
+# after_forkworker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
 timeout 15
 preload_app true
 
-listen '/home/vagrant/myapp/tmp/unicorn.sock'
-pid    '/home/vagrant/myapp/tmp/unicorn.pid'
+listen '/home/uutarou/construction-sample-rails-app/tmp/unicorn.sock'
+pid    '/home/uutarou/construction-sample-rails-app/tmp/unicorn.pid'
 
 before_fork do |server, worker|
   Signal.trap 'TERM' do
