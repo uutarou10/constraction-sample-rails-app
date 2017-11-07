@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root  :to => 'welcome#index'
+  root to: 'welcome#index'
   get 'post', to: 'post#index'
   post 'posts', to: 'post#create'
 
