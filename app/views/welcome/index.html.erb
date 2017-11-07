@@ -1,13 +1,13 @@
-<h1>Welcome!!</h1>
-<p>This is comment board</p>
-
-<%= link_to 'Create new post', '/post' %>
+<h1 style="margin-top: 10px;">Welcome!!</h1>
+<p>This is comment board.</p>
 
 <h2>All posts</h2>
 
 <% @post.each do |post| %>
-    <div class="post">
-      <p><%= post.body %></p>
-      <p class="author">Post by <%= post.author %> (<%= post.created_at.strftime("%Y/%m/%d, %H:%M:%S") %>)</p>
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text"><%= post.body %></p>
+        <p class="card-subtitle mb-2 text-muted"><%= post.author %> (<%= post.created_at.strftime("%Y/%m/%d %H:%M:%S") %>)</p>
+      </div>
     </div>
 <% end %>

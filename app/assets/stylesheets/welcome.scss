@@ -2,13 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.post {
-  border: black 1px dotted;
-  padding: 10px;
-  margin-bottom: 10px;
-
-  .author {
-    color: gray;
-    font-size: 70%;
-  }
+.card {
+  margin-bottom: 16px;
 }
